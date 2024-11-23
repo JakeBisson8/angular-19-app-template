@@ -1,59 +1,88 @@
-# Angular19AppTemplate
+# angular-19-app-template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+### About
 
-## Development server
+A basic Angular 19 starter template with basic configuration of prettier, eslint and husky.
 
-To start a local development server, run:
+### Installation
 
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Select to use the template in GitHub and create a new repository
+2. Clone your new repository
 
 ```bash
-ng generate component component-name
+git clone <repository_link>.git
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. Udpate `package.json` to change the `name`, `description`, `version`, `keywords` etc. to match your project.
+4. Install project dependencies using your package manager of choice
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
+5. Update angular.json to remove angular-19-app-template as the project name to whatever you want
+6. Update src/custom-theme.scss to change angular-19-app-template to the project name you want
+7. Change app component title to project name or any other title
+8. Install recommended vscode extensions
+   1. Angular Language Service
+   2. ESLint
+   3. Prettier - Code Formatter
+9. Consider configuring vscode to run prettier on file saved
+   1. Open `settings.json`
+   2. Add the following rules
 
-To build the project run:
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+10. Start the development server
 
 ```bash
-ng build
+npm run start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Environments
 
-## Running unit tests
+The project comes pre-configured with production and development environments. The environment files can be found in `src/environments`. For more on environments see the [Angular docs](https://angular.dev/tools/cli/environments#configure-environment-specific-defaults).
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Lint
+
+Lint and don't apply fixes
 
 ```bash
-ng test
+npm run lint
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Lint and apply fixes where possible
 
 ```bash
-ng e2e
+npm lint:fix
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Format
 
-## Additional Resources
+Check for format errors:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run prettier
+```
+
+Format files:
+
+```bash
+npm run prettier:write
+```
+
+### Test
+
+```bash
+npm run test
+```
+
+### License
+
+[MIT](https://github.com/JakeBisson8/angular-17-app-template/blob/main/LICENSE)  
+[https://choosealicense.com/licenses/mit/](https://choosealicense.com/licenses/mit/)
